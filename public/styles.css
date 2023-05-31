@@ -1,0 +1,160 @@
+
+:root {
+    --dasharray: 251;
+    --offset: 251;
+}
+
+.container {
+    margin: auto;
+    padding: 30px;
+    background-color: #D14D72;
+    color: #D14D72;
+    border-radius: 15px;
+    width: 40%;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.setup {
+    display: flex;
+    align-items: center;
+}
+
+.setupDiv {
+    width: 50%;
+    margin: 0 30px;
+}
+
+.setupDiv input {
+    margin: 5px 0;
+}
+
+.setupDiv p {
+    display: inline-block;
+    font-style: italic;
+}
+
+.setupInput {
+    display: block;
+    border-radius: 15px;
+    padding: 3px;
+    border: none;
+}
+
+.userBtn {
+    font-family: 'Josefin Sans', sans-serif;
+    text-align: center;
+    margin-top: 15px;
+    float: left;
+    width: 30%;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 16px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #D14D72;
+}
+
+.initBudget {
+    text-align: center;
+}
+
+.secDiv {
+    background-color: #FCC8D1;
+    padding: 30px;
+    margin: 30px;
+    border-radius: 15px;
+}
+
+.detail {
+    display: inline-block;
+    width: 33%;
+    text-align: center;
+}
+
+.detailMain {
+    font-weight: 700;
+}
+
+.addedItems {
+    color: #D14D72;
+}
+
+.addedItems .detail {
+    font-weight: 400;
+}
+
+hr {
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, transparent, #D14D72, transparent);  
+}
+
+.circlesContainer {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(-90deg);
+    stroke-linecap: round;
+}
+
+.movingCircle {
+    stroke-dasharray: var(--dasharray);
+    stroke-dashoffset: var(--offset);
+    transition: all 0.3s ease-in-out;
+}
+
+.remNote {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.reset {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.resetBtn {
+    font-family: 'Josefin Sans', sans-serif;
+    color: #f1d6dc;
+    width: 30%;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    background: rgba(255, 255, 255, 0.24);
+    border-radius: 16px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.userBtn:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.userBtn:active,  .resetBtn:active{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.resetBtn:hover {
+    animation: shake 1s;
+}
+
+@keyframes shake {
+    10% {transform: rotate(7deg);}
+    20% {transform: rotate(-7deg);}
+    30% {transform: rotate(7deg);}
+    40% {transform: rotate(-7deg);}
+    50% {transform: rotate(0deg);}
+}
