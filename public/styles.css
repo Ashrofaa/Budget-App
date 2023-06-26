@@ -17,11 +17,8 @@
 .setup {
     display: flex;
     align-items: center;
-}
-
-.setupDiv {
-    width: 50%;
-    margin: 0 30px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .setupDiv input {
